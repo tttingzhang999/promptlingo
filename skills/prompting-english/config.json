@@ -1,0 +1,11 @@
+{
+  "level": "B2",
+  "native_lang": "zh-TW",
+  "target_lang": "en",
+  "parser": {
+    "max_turns_per_day": 80,
+    "user_turn_max_chars": 500,
+    "assistant_turn_max_chars": 800,
+    "min_turn_chars": 8
+  }
+}

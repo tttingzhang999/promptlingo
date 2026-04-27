@@ -1,0 +1,42 @@
+# prompting-english
+
+透過分析你跟 Claude Code 的對話,順便練英文。
+
+## 概念
+
+你跟 Claude Code 的對話原本就完整存在 `~/.claude/projects/*.jsonl`。本專案提供一個 Agent Skill `prompting-english`,讀取 JSONL,過濾雜訊(code、路徑、tool I/O、系統訊息),依你設定的 CEFR 等級產出每日學習素材:
+
+1. **句型改寫** — 你的中文 prompt → 多種英文表達
+2. **句型改善** — 你的英文 prompt → 文法 / 用字修正
+3. **單字** — 從對話內挑符合等級的字(含略高一級延伸)
+4. **文法重點** — 整體歸納
+
+## 前置需求
+
+- **Python 3.10+**
+- **[Claude Code](https://docs.claude.com/en/docs/claude-code)** 已安裝且至少使用過一次,確認 `~/.claude/projects/` 內有 `.jsonl` 對話檔
+- macOS
+
+## 安裝
+
+將 skill symlink到 Claude config:
+
+```bash
+ln -s "$(pwd)/skills/prompting-english" ~/.claude/skills/prompting-english
+```
+
+編輯 `skills/prompting-english/config.json` 設定等級:
+
+```json
+{ "level": "B2", "native_lang": "zh-TW", "target_lang": "en" }
+```
+
+## 使用
+
+在任何 Claude Code session 內:
+
+- `/prompting-english` — 分析今天
+- `/prompting-english 2026-04-25` — 指定日期
+
+報告寫到 `skills/prompting-english/data/reports/<DATE>/summary.md`,
+單字累積在 `data/vocab.json`,易錯句型在 `data/patterns.json`。
