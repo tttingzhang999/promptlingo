@@ -1,19 +1,19 @@
 ---
-name: prompting-english
-description: Analyze the user's daily Claude Code conversations and produce an English-learning report (vocabulary, grammar focus, sentence improvement, sentence rewrites). Triggered when the user runs /prompting-english or /prompting-english YYYY-MM-DD.
+name: promptlingo
+description: Analyze the user's daily Claude Code conversations and produce an English-learning report (vocabulary, grammar focus, sentence improvement, sentence rewrites). Triggered when the user runs /promptlingo or /promptlingo YYYY-MM-DD.
 argument-hint: "[YYYY-MM-DD]"
 disable-model-invocation: true
 allowed-tools: Bash(python3 *) Bash(cat *) Read Write
 ---
 
-# prompting-english
+# promptlingo
 
 Read JSONL transcripts from `~/.claude/projects/`, filter noise, and generate study material calibrated to the user's CEFR level.
 
 ## Invocation
 
-- `/prompting-english` — analyze today
-- `/prompting-english 2026-04-25` — analyze a specific ISO-8601 date
+- `/promptlingo` — analyze today
+- `/promptlingo 2026-04-25` — analyze a specific ISO-8601 date
 
 ## Steps
 
@@ -130,9 +130,9 @@ Output: today's `topic_label`, the top 3 takeaways, and the report path. Do not 
 Clone this repo, then symlink the skill into your Claude config:
 
 ```bash
-git clone https://github.com/<your-username>/prompting-english.git
-cd prompting-english
-ln -s "$(pwd)/skills/prompting-english" ~/.claude/skills/prompting-english
+git clone https://github.com/<your-username>/promptlingo.git
+cd promptlingo
+ln -s "$(pwd)/skills/promptlingo" ~/.claude/skills/promptlingo
 ```
 
 ## Adjust level

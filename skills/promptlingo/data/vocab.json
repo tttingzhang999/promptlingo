@@ -1,0 +1,244 @@
+[
+  {
+    "word": "additive",
+    "cefr": "C1",
+    "zh": "累加的；附加的",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "He wrote an additive helper."
+    ]
+  },
+  {
+    "word": "buffering",
+    "cefr": "C1",
+    "zh": "緩衝",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Earlier buffering had hidden the progress."
+    ]
+  },
+  {
+    "word": "compliant",
+    "cefr": "C1",
+    "zh": "符合規範的",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "API rejected schema-compliant request."
+    ]
+  },
+  {
+    "word": "coverage",
+    "cefr": "B2",
+    "zh": "涵蓋範圍",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Coverage progressed steadily."
+    ]
+  },
+  {
+    "word": "deprecated",
+    "cefr": "C1",
+    "zh": "已棄用",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "Node.js 20 actions are deprecated."
+    ]
+  },
+  {
+    "word": "evidence",
+    "cefr": "B2",
+    "zh": "證據",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Evidence from the logs showed coverage progressed."
+    ]
+  },
+  {
+    "word": "expose",
+    "cefr": "B2",
+    "zh": "對外公開；暴露",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Endpoints were still exposed publicly."
+    ]
+  },
+  {
+    "word": "impacted",
+    "cefr": "B2",
+    "zh": "受影響的",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Impacted services restarted cleanly."
+    ]
+  },
+  {
+    "word": "legitimate",
+    "cefr": "B2",
+    "zh": "合法的；正當的",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Legitimate request paths were unaffected."
+    ]
+  },
+  {
+    "word": "mechanism",
+    "cefr": "B2",
+    "zh": "機制",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "like async mechanism"
+    ]
+  },
+  {
+    "word": "misnomer",
+    "cefr": "C1",
+    "zh": "名稱不當",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "The variable name is a misnomer."
+    ]
+  },
+  {
+    "word": "mutate",
+    "cefr": "C1",
+    "zh": "變動；改變",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "It mutates the FastAPI schema in memory."
+    ]
+  },
+  {
+    "word": "pending",
+    "cefr": "B2",
+    "zh": "待處理的",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "if service is pending, can't we test available service first?"
+    ]
+  },
+  {
+    "word": "prevent",
+    "cefr": "B2",
+    "zh": "預防 / 阻止",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "any method to prevent this issue?"
+    ]
+  },
+  {
+    "word": "quota",
+    "cefr": "B2",
+    "zh": "配額",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "github actions 超過 quota 不能使用"
+    ]
+  },
+  {
+    "word": "recap",
+    "cefr": "B2",
+    "zh": "重點回顧",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "recap 目前狀況"
+    ]
+  },
+  {
+    "word": "redirect",
+    "cefr": "B2",
+    "zh": "重新導向",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Redirecting attention to service connectivity."
+    ]
+  },
+  {
+    "word": "restructure",
+    "cefr": "C1",
+    "zh": "重新建構",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "He restructured the architecture diagrams."
+    ]
+  },
+  {
+    "word": "revert",
+    "cefr": "B2",
+    "zh": "回復 / 撤回",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "The user reverted all four edits."
+    ]
+  },
+  {
+    "word": "suppress",
+    "cefr": "C1",
+    "zh": "抑制；壓制",
+    "count": 1,
+    "first_seen": "2026-04-28",
+    "last_seen": "2026-04-28",
+    "examples": [
+      "Suppress one noisy check globally."
+    ]
+  },
+  {
+    "word": "unstable",
+    "cefr": "B2",
+    "zh": "不穩定的",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "eao still unstable"
+    ]
+  },
+  {
+    "word": "violate",
+    "cefr": "B2",
+    "zh": "違反",
+    "count": 1,
+    "first_seen": "2026-04-27",
+    "last_seen": "2026-04-27",
+    "examples": [
+      "Response violates schema."
+    ]
+  }
+]

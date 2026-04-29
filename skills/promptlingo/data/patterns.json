@@ -1,0 +1,51 @@
+[
+  {
+    "pattern": "rewrite/zh-en",
+    "user_wrote": "現在 smoke test 可能因為我們 github actions 超過 quota 不能使用",
+    "correction": "Our smoke test may be blocked because we have exceeded the GitHub Actions quota.",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  },
+  {
+    "pattern": "rewrite/zh-en",
+    "user_wrote": "我們只修跟 smoke-test 有關的就好, 其他的不管",
+    "correction": "Let's only fix issues related to the smoke test and ignore everything else.",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  },
+  {
+    "pattern": "rewrite/zh-en",
+    "user_wrote": "schemathesis 不能處理客製化的 error code 嗎？",
+    "correction": "Can't Schemathesis handle custom error codes?",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  },
+  {
+    "pattern": "improve/en",
+    "user_wrote": "if eao is not stable, just tag service unavailable in report and passed it",
+    "correction": "If eao is unstable, just tag the service as unavailable in the report and let it pass.",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  },
+  {
+    "pattern": "improve/en",
+    "user_wrote": "no, should we push to githhb first and test by run the github actions?",
+    "correction": "No — should we push to GitHub first and test by running the GitHub Actions?",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  },
+  {
+    "pattern": "improve/en",
+    "user_wrote": "i think is docker iamge layer network issue, any method to prevent this issue?",
+    "correction": "I think it's a Docker image layer network issue. Is there any method to prevent it?",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  },
+  {
+    "pattern": "improve/en",
+    "user_wrote": "run make smoke-test {service} for check your changes are correct or not",
+    "correction": "Run `make smoke-test {service}` to check whether your changes are correct.",
+    "occurrences": 1,
+    "last_seen": "2026-04-27"
+  }
+]

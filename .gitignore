@@ -3,4 +3,4 @@ __pycache__/
 *.tmp
 .DS_Store
 .ruff_cache/
-skills/prompting-english/data/reports/
+skills/promptlingo/data/reports/
