@@ -19,11 +19,13 @@
 
 ## 安裝
 
-將 skill symlink到 Claude config:
+執行安裝腳本(會 seed 空的 `vocab.json` / `patterns.json`,並建立 symlink 到 `~/.claude/skills/promptlingo`):
 
 ```bash
-ln -s "$(pwd)/skills/promptlingo" ~/.claude/skills/promptlingo
+./install.sh
 ```
+
+> 已存在的執行期資料檔不會被覆寫。執行期 `vocab.json` / `patterns.json` 已被 gitignore,模板放在 `skills/promptlingo/data/templates/`。
 
 編輯 `skills/promptlingo/config.json` 設定等級:
 
