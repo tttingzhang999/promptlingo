@@ -63,6 +63,6 @@
 
 ## Ref
 
-- [Input hypothesis](https://en.wikipedia.org/wiki/Input_hypothesis)
+- [Input hypothesis on wiki](https://en.wikipedia.org/wiki/Input_hypothesis)
 - [Comprehensible English by Volka English](https://www.youtube.com/watch?v=bo47JoSxl1s)
 - [Not All Languages Are Created Equal in LLMs: Improving Multilingual Capability by Cross-Lingual-Thought Prompting](https://arxiv.org/abs/2305.07004)
