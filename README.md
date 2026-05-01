@@ -1,6 +1,19 @@
 # promptlingo
 
-透過分析你跟 Claude Code 的對話,順便練英文。
+啟發自語言學家 Stephen Krashen 提出的 Comprehensible Input 理論，我認為要有效學習一門語言，有幾個關鍵方向：
+
+- **i+1 原則** — 找到略高於目前程度的內容，既能理解又有挑戰
+- **多模態輸入** — 結合聽覺、視覺甚至觸覺，加深語言與概念、想法之間的連結
+- **Shadowing** — 跟讀模仿，內化語感並提升口說流暢度
+- **環境** — 持續處在目標語言環境中，並嘗試用該語言思考
+
+而我希望透過這個工具達成的目標：
+
+1. 能用英文敘述軟體工程領域的內容
+2. [最大程度發揮 Coding Agent 的能力](https://arxiv.org/abs/2305.07004)
+3. 遇到 Coding Agent 無法解決的問題時，能為自己找到正確的 Context 與切入點
+
+軟體工程領域中，我們經常需要處理抽象的單字與概念，例如 `iterate`、`robust`、`feasibility` 等。這個 Skill 會根據你日常的開發任務客製英文學習內容，讓學習素材貼近實際工作，提升語言學習與真實情境的連結性。
 
 ## 概念
 
@@ -47,3 +60,9 @@
 
 報告寫到 `skills/promptlingo/data/reports/<DATE>/summary.md`,
 單字累積在 `data/vocab.json`,易錯句型在 `data/patterns.json`。
+
+## Ref
+
+- [Input hypothesis](https://en.wikipedia.org/wiki/Input_hypothesis)
+- [Comprehensible English by Volka English](https://www.youtube.com/watch?v=bo47JoSxl1s)
+- [Not All Languages Are Created Equal in LLMs: Improving Multilingual Capability by Cross-Lingual-Thought Prompting](https://arxiv.org/abs/2305.07004)
