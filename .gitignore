@@ -1,8 +1,4 @@
+learning/
 __pycache__/
-*.pyc
-*.tmp
-.DS_Store
 .ruff_cache/
-skills/promptlingo/data/reports/
-skills/promptlingo/data/vocab.json
-skills/promptlingo/data/patterns.json
+.DS_Store

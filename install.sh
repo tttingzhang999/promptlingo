@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
-# promptlingo installer: seed runtime data files from templates and link skill into ~/.claude/skills.
+# promptlingo installer: seed the learning folder and link the skill into ~/.claude/skills.
+# Set PROMPTLINGO_LEARNING_DIR to write into an Obsidian vault; the default is <skill>/learning.
 set -euo pipefail
 
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SKILL_DIR="$REPO_DIR/skills/promptlingo"
-DATA_DIR="$SKILL_DIR/data"
-TEMPLATE_DIR="$DATA_DIR/templates"
+SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LEARNING_DIR="${PROMPTLINGO_LEARNING_DIR:-$SKILL_DIR/learning}"
+TEMPLATE_DIR="$SKILL_DIR/data/templates"
 CLAUDE_SKILLS_DIR="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
 
 echo "==> promptlingo install"
-echo "    repo:   $REPO_DIR"
-echo "    target: $CLAUDE_SKILLS_DIR/promptlingo"
+echo "    skill:    $SKILL_DIR"
+echo "    learning: $LEARNING_DIR"
+echo "    target:   $CLAUDE_SKILLS_DIR/promptlingo"
 
-mkdir -p "$DATA_DIR/reports"
+mkdir -p "$LEARNING_DIR/data" "$LEARNING_DIR/reports" "$LEARNING_DIR/glossary" "$LEARNING_DIR/grammar"
 
 for f in vocab.json patterns.json; do
   src="$TEMPLATE_DIR/$f"
-  dst="$DATA_DIR/$f"
+  dst="$LEARNING_DIR/data/$f"
   if [[ ! -f "$src" ]]; then
     echo "    [ERROR] missing template: $src" >&2
     exit 1
@@ -25,7 +26,7 @@ for f in vocab.json patterns.json; do
     echo "    [skip] $f already exists"
   else
     cp "$src" "$dst"
-    echo "    [init] $f seeded from template"
+    echo "    [init] $f seeded"
   fi
 done
 

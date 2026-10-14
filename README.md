@@ -31,21 +31,35 @@
 
 ## 前置需求
 
-- **Python 3.10+**
+- **[uv](https://docs.astral.sh/uv/)**（執行 `scripts/` 裡的 Python）
 - **[Claude Code](https://docs.claude.com/en/docs/claude-code)** 已安裝且至少使用過一次,確認 `~/.claude/projects/` 內有 `.jsonl` 對話檔
 - macOS
 
 ## 安裝
 
-執行安裝腳本(會 seed 空的 `vocab.json` / `patterns.json`,並建立 symlink 到 `~/.claude/skills/promptlingo`):
+執行安裝腳本。它會建立學習資料夾、seed 空的 `vocab.json` / `patterns.json`，並建立 symlink 到 `~/.claude/skills/promptlingo`：
 
 ```bash
 ./install.sh
 ```
 
-> 已存在的執行期資料檔不會被覆寫。執行期 `vocab.json` / `patterns.json` 已被 gitignore,模板放在 `skills/promptlingo/data/templates/`。
+學習資料預設寫到 skill 底下的 `learning/`（已被 gitignore）。已存在的資料檔不會被覆寫。
 
-編輯 `skills/promptlingo/config.json` 設定等級:
+### 寫進 Obsidian vault（選用）
+
+報告是 Obsidian 風格的 Markdown。要放進自己的 vault，在安裝前設定 `PROMPTLINGO_LEARNING_DIR`：
+
+```bash
+echo 'export PROMPTLINGO_LEARNING_DIR="$HOME/<你的 vault>/English Learning"' >> ~/.zshrc
+source ~/.zshrc
+./install.sh
+```
+
+學習資料夾在 vault 裡時，每次產出報告後會附上一個 `obsidian://` 連結，可以直接打開報告。
+
+### 設定等級
+
+編輯 `config.json`：
 
 ```json
 { "level": "B2", "native_lang": "zh-TW", "target_lang": "en" }
@@ -53,16 +67,24 @@
 
 ## 使用
 
-在任何 Claude Code session 內:
+在任何 Claude Code session 內：
 
 - `/promptlingo` — 分析今天
 - `/promptlingo 2026-04-25` — 指定日期
 
-報告寫到 `skills/promptlingo/data/reports/<DATE>/summary.md`,
-單字累積在 `data/vocab.json`,易錯句型在 `data/patterns.json`。
+產出都在 `LEARNING_DIR` 裡：
+
+- `reports/<DATE> English Daily.md` — 每日報告
+- `glossary/Glossary <LEVEL>.md` — 依 CEFR 等級累積的單字
+- `grammar/<分類>.md` — 依分類累積的文法重點
+- `data/vocab.json`、`data/patterns.json` — 間隔複習的狀態
 
 ## Ref
 
 - [Input hypothesis on wiki](https://en.wikipedia.org/wiki/Input_hypothesis)
 - [Comprehensible English by Volka English](https://www.youtube.com/watch?v=bo47JoSxl1s)
 - [Not All Languages Are Created Equal in LLMs: Improving Multilingual Capability by Cross-Lingual-Thought Prompting](https://arxiv.org/abs/2305.07004)
+
+## License
+
+[MIT](LICENSE)

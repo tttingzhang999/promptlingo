@@ -1,9 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# dependencies = []
+# ///
 """Output vocab due for spaced review today.
 
 Usage:
-    python3 due.py [YYYY-MM-DD]              # default: today
-    python3 due.py [YYYY-MM-DD] --limit=N
+    uv run due.py [YYYY-MM-DD]              # default: today
+    uv run due.py [YYYY-MM-DD] --limit=N
 
 Stdout: JSON {"today": "<DATE>", "due": [{word, cefr, zh, last_seen, count, interval, days_overdue, examples}]}
 Intervals (Leitner-style, by count): 1->1d, 2->3d, 3->7d, 4->14d, >=5->30d.
@@ -15,7 +19,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
-VOCAB_PATH = Path(__file__).resolve().parent.parent / "data" / "vocab.json"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import VOCAB_JSON as VOCAB_PATH  # noqa: E402
 
 INTERVALS = {1: 1, 2: 3, 3: 7, 4: 14}
 INTERVAL_DEFAULT = 30
