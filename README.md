@@ -17,7 +17,7 @@
 
 ## 概念
 
-你跟 Claude Code 的對話原本就完整存在 `~/.claude/projects/*.jsonl`。本專案提供一個 Agent Skill `promptlingo`,讀取 JSONL,過濾雜訊(code、路徑、tool I/O、系統訊息),依你設定的 CEFR 等級產出每日學習素材:
+你跟 coding agent 的對話原本就完整存在本機：Claude Code 在 `~/.claude/projects/`，Codex 在 `~/.codex/sessions/`。本專案提供一個 [Agent Skill](https://agentskills.io) `promptlingo`，同時讀取兩邊的 JSONL，過濾雜訊(code、路徑、tool I/O、系統訊息),依你設定的 CEFR 等級產出每日學習素材:
 
 1. **句型改寫** — 你的中文 prompt → 多種英文表達
 2. **句型改善** — 你的英文 prompt → 文法 / 用字修正
@@ -32,12 +32,12 @@
 ## 前置需求
 
 - **[uv](https://docs.astral.sh/uv/)**（執行 `scripts/` 裡的 Python）
-- **[Claude Code](https://docs.claude.com/en/docs/claude-code)** 已安裝且至少使用過一次,確認 `~/.claude/projects/` 內有 `.jsonl` 對話檔
+- **[Claude Code](https://docs.claude.com/en/docs/claude-code)** 或 **[Codex](https://developers.openai.com/codex)**，至少使用過一次，本機有 `.jsonl` 對話檔
 - macOS
 
 ## 安裝
 
-執行安裝腳本。它會建立學習資料夾、seed 空的 `vocab.json` / `patterns.json`，並建立 symlink 到 `~/.claude/skills/promptlingo`：
+執行安裝腳本。它會建立學習資料夾、seed 空的 `vocab.json` / `patterns.json`，並把 skill symlink 到 `~/.claude/skills/promptlingo` 和 `~/.codex/skills/promptlingo`（只連結到已安裝的 agent）：
 
 ```bash
 ./install.sh
@@ -67,7 +67,7 @@ source ~/.zshrc
 
 ## 使用
 
-在任何 Claude Code session 內：
+在 Claude Code 或 Codex 的任何 session 裡：
 
 - `/promptlingo` — 分析今天
 - `/promptlingo 2026-04-25` — 指定日期

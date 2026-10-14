@@ -1,6 +1,6 @@
 ---
 name: promptlingo
-description: Analyzes the user's daily Claude Code conversations and produces an Obsidian-flavored English-learning report (vocabulary, grammar focus, sentence improvement, sentence rewrites, i+1 article, spaced review). Triggered when the user runs /promptlingo or /promptlingo YYYY-MM-DD.
+description: Analyzes the user's daily Claude Code and Codex conversations and produces an Obsidian-flavored English-learning report (vocabulary, grammar focus, sentence improvement, sentence rewrites, i+1 article, spaced review). Triggered when the user runs /promptlingo or /promptlingo YYYY-MM-DD.
 argument-hint: "[YYYY-MM-DD]"
 allowed-tools: Bash(uv *) Bash(cat *) Read Write
 model: haiku
@@ -8,7 +8,7 @@ model: haiku
 
 # promptlingo
 
-Read JSONL transcripts from `~/.claude/projects/`, filter noise, and generate study material calibrated to the user's CEFR level. Output is Obsidian-flavored Markdown written to `LEARNING_DIR`; point it into an Obsidian vault so reports, vocab, and patterns are browsable, searchable, and linkable.
+Read JSONL transcripts from Claude Code (`~/.claude/projects/`) and Codex (`~/.codex/sessions/`), filter noise, and generate study material calibrated to the user's CEFR level. Output is Obsidian-flavored Markdown written to `LEARNING_DIR`; point it into an Obsidian vault so reports, vocab, and patterns are browsable, searchable, and linkable.
 
 ## Invocation
 
@@ -49,7 +49,7 @@ Hold onto `level` (CEFR) and `native_lang` (default `zh-TW`). Use `native_lang` 
 uv run "$SKILL_DIR/scripts/transcript_loader.py" $DATE_ARG
 ```
 
-Returns `{date, sources, stats, turns}`. Each turn carries `project` (cwd-encoded) and `cwd`. If `stats.stage3_turns == 0`, tell the user there's nothing to analyze and stop.
+Returns `{date, sources, stats, turns}`. Each turn carries `project` (cwd-encoded, shared by both agents), `cwd` and `agent` (`claude-code` or `codex`). If `stats.stage3_turns == 0`, tell the user there's nothing to analyze and stop.
 
 ### 2.5 Narrow bundle (Krashen narrow input)
 
